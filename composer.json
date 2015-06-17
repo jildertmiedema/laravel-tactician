@@ -1,6 +1,7 @@
 {
     "name": "jildertmiedema/laravel-tactician",
     "description": "Tactician for laravel 5+",
+    "keywords": ["laravel", "tactician", "commandbus"],
     "require": {
         "league/tactician": "^0.6.0",
         "laravel/framework": "^5.1"

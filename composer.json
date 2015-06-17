@@ -1,0 +1,23 @@
+{
+    "name": "jildertmiedema/laravel-tactician",
+    "description": "Tactician for laravel 5+",
+    "require": {
+        "league/tactician": "^0.6.0",
+        "laravel/framework": "^5.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^4.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+                "JildertMiedema\\LaravelTactician\\": "src/LaravelTactician/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jildert Miedema",
+            "email": "jildert@pimenta.nl"
+        }
+    ]
+}

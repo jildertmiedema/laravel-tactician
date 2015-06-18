@@ -1,5 +1,9 @@
 # laravel-tactician
 Tactician command bus for laravel 5+
+[![Build Status](https://img.shields.io/travis/jildertmiedema/laravel-tactician/master.svg?style=flat-square)](https://travis-ci.org/jildertmiedema/laravel-tactician)
+[![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE)
+[![Packagist Version](https://img.shields.io/packagist/v/jildertmiedema/laravel-tactician.svg?style=flat-square)](https://packagist.org/packages/jildertmiedema/laravel-tactician)
+[![Total Downloads](https://img.shields.io/packagist/dt/jildertmiedema/laravel-tactician.svg?style=flat-square)](https://packagist.org/packages/jildertmiedema/laravel-tactician)
 
 ## Install
 

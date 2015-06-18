@@ -2,9 +2,9 @@
 
 namespace JildertMiedema\LaravelTactician;
 
-use Illuminate\Container\Container;
 use League\Tactician\Exception\MissingHandlerException;
 use League\Tactician\Handler\Locator\HandlerLocator;
+use Illuminate\Contracts\Container\Container;
 
 class Locator implements HandlerLocator
 {

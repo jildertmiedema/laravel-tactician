@@ -3,6 +3,7 @@
     "description": "Tactician for laravel 5+",
     "keywords": ["laravel", "tactician", "commandbus"],
     "require": {
+        "php": ">=5.5.9",
         "league/tactician": "^0.6.0",
         "illuminate/support": "^5.0"
     },

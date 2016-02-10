@@ -2,10 +2,10 @@
 
 class TestCommandHandler
 {
-    public static $handledCommands = [];
+    public $handledCommands = [];
 
     public function handle(TestCommand $command)
     {
-        static::$handledCommands[] = $command;
+        $this->handledCommands[] = $command;
     }
 }

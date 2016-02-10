@@ -17,7 +17,7 @@ class CommandExecutionTest extends PHPUnit_Framework_TestCase
 
         $handler = new TestCommandHandler();
 
-        $application->singleton(TestCommandHandler::class, function () use (&$handler) {
+        $application->singleton(TestCommandHandler::class, function () use ($handler) {
             return $handler;
         });
 
@@ -42,14 +42,11 @@ class CommandExecutionTest extends PHPUnit_Framework_TestCase
             return new \Illuminate\Config\Repository();
         });
 
-        $handler = new TestCommandHandler();
-
         $application->singleton(TestCommandHandler::class, function () use (&$handler) {
-            return $handler;
+            return new TestCommandHandler();
         });
 
         $application->register(new TacticianServiceProvider($application));
-
 
         $application['tactician.middleware']->prepend('test.middleware');
 

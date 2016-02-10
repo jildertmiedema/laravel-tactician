@@ -49,7 +49,7 @@ class Controller extends BaseController
 
 In your own ServiceProvider:
 ```php
-$this->app['tactician.middleware']->push('your.middleware');
+$this->app['tactician.middleware']->prepend('your.middleware');
 
 $this->app->bind('your.middleware', function () {
     return new MiddleWare

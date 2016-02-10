@@ -3,9 +3,16 @@ language: php
 php:
   - 5.5
   - 5.6
+  - 7.0
+  - hhvm
+
+matrix:
+    include:
+        - php: 5.5
+          env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
 
 before_script:
-  - composer self-update
-  - composer install --dev -o
+    - travis_retry composer self-update
+    - travis_retry composer update ${COMPOSER_FLAGS} --no-interaction
 
-script: phpunit --coverage-text
+script: vendor/bin/phpunit --coverage-text -c phpunit.xml

@@ -9,7 +9,7 @@ php:
 matrix:
     include:
         - php: 5.5
-          env: 'COMPOSER_FLAGS="--prefer-stable --prefer-lowest"'
+          env: 'COMPOSER_FLAGS="--prefer-stable"'
 
 before_script:
     - travis_retry composer self-update

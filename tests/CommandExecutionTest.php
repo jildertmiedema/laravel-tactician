@@ -1,8 +1,9 @@
 <?php
 
 use JildertMiedema\LaravelTactician\TacticianServiceProvider;
+use PHPUnit\Framework\TestCase;
 
-class CommandExecutionTest extends PHPUnit_Framework_TestCase
+class CommandExecutionTest extends TestCase
 {
     public function testExecution()
     {
@@ -24,10 +25,13 @@ class CommandExecutionTest extends PHPUnit_Framework_TestCase
         $application->register(new TacticianServiceProvider($application));
 
         $command = new TestCommand('data');
+        /**
+         * @var \JildertMiedema\LaravelTactician\Dispatcher
+         */
         $application['tactician.dispatcher']->dispatch($command);
 
-        $this->assertCount(1, $handler->handledCommands);
-        $this->assertEquals($command, $handler->handledCommands[0]);
+        $this->assertCount(1, $handler->getHandledCommands());
+        $this->assertEquals($command, $handler->getHandledCommands()[0]);
     }
 
     public function testWithMiddleware()

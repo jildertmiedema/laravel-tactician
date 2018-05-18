@@ -11,6 +11,6 @@ trait DispatchesCommands
      */
     protected function dispatch($command)
     {
-        app('tactician.dispatcher')->dispatch($command);
+        return app('tactician.dispatcher')->dispatch($command);
     }
 }

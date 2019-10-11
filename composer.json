@@ -1,15 +1,15 @@
 {
     "name": "jildertmiedema/laravel-tactician",
-    "description": "Tactician for laravel 5+",
+    "description": "Tactician for laravel 6+",
     "keywords": ["laravel", "tactician", "commandbus"],
     "require": {
-        "php": ">=5.5.9",
+        "php": ">=7.2.0",
         "league/tactician": "^1.0",
-        "illuminate/support": "^5.1"
+        "illuminate/support": "^6.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.0",
-        "laravel/framework": "^5.1"
+        "phpunit/phpunit": "^8.0",
+        "laravel/framework": "^6.0"
     },
     "license": "MIT",
     "autoload": {

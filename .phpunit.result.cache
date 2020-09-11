@@ -1,1 +1,1 @@
-C:37:"PHPUnit\Runner\DefaultTestResultCache":151:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:2:{s:35:"CommandExecutionTest::testExecution";d:0.028;s:40:"CommandExecutionTest::testWithMiddleware";d:0.013;}}}
+C:37:"PHPUnit\Runner\DefaultTestResultCache":147:{a:2:{s:7:"defects";a:0:{}s:5:"times";a:2:{s:35:"CommandExecutionTest::testExecution";d:0.008;s:40:"CommandExecutionTest::testWithMiddleware";d:0;}}}

@@ -2,26 +2,17 @@
 
 namespace JildertMiedema\LaravelTactician;
 
+use Illuminate\Contracts\Container\Container;
 use League\Tactician\Exception\MissingHandlerException;
 use League\Tactician\Handler\Locator\HandlerLocator;
-use Illuminate\Contracts\Container\Container;
 
 class Locator implements HandlerLocator
 {
-    /**
-     * @var Container
-     */
-    private $container;
-    /**
-     * @var
-     */
-    private $commandNamespace;
-    /**
-     * @var
-     */
-    private $handlerNamespace;
+    private Container $container;
+    private string $commandNamespace;
+    private string $handlerNamespace;
 
-    public function __construct(Container $container, $commandNamespace, $handlerNamespace)
+    public function __construct(Container $container, string $commandNamespace, string $handlerNamespace)
     {
         $this->container = $container;
         $this->commandNamespace = $commandNamespace;
@@ -41,7 +32,9 @@ class Locator implements HandlerLocator
     {
         $command = str_replace($this->commandNamespace, '', $commandName);
 
-        $handlerName = $this->handlerNamespace.'\\'.trim($command, '\\').'Handler';
+        $handlerName = $this->handlerNamespace . '\\' . trim($command, '\\') . 'Handler';
+
+//        dd($command, $handlerName, $commandName);
 
         if (!class_exists($handlerName)) {
             throw MissingHandlerException::forCommand($commandName);

@@ -13,7 +13,9 @@ class CommandExecutionTest extends TestCase
         $application = new \Illuminate\Foundation\Application();
 
         $application->bind('config', function () {
-            return new \Illuminate\Config\Repository();
+            $repository = new \Illuminate\Config\Repository();
+            $repository->set("tactician", ["commandNamespace" => "", "handlerNamespace" => ""]);
+            return $repository;
         });
 
         $handler = new TestCommandHandler();
@@ -43,7 +45,9 @@ class CommandExecutionTest extends TestCase
         $application = new \Illuminate\Foundation\Application();
 
         $application->bind('config', function () {
-            return new \Illuminate\Config\Repository();
+            $repository = new \Illuminate\Config\Repository();
+            $repository->set("tactician", ["commandNamespace" => "", "handlerNamespace" => ""]);
+            return $repository;
         });
 
         $application->singleton(TestCommandHandler::class, function () use (&$handler) {

@@ -17,6 +17,9 @@
                 "JildertMiedema\\LaravelTactician\\": "src/LaravelTactician/"
         }
     },
+    "scripts": {
+        "test": "phpunit"
+    },
     "authors": [
         {
             "name": "Jildert Miedema",
